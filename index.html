@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="header">
+                <h1 class="title">Advanced Calculator</h1>
+                <div class="theme-toggle">
+                    <span class="theme-label">Light</span>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-switch">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="theme-label">Dark</span>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-button active" data-tab="basic">Basic</button>
+                <button class="tab-button" data-tab="scientific">Scientific</button>
+                <button class="tab-button" data-tab="statistics">Statistics</button>
+                <button class="tab-button" data-tab="date">Date</button>
+            </div>
+
+            <div class="display-container">
+                <div class="calculation-display" id="calculation">0</div>
+                <div class="result-display" id="result">0</div>
+            </div>
+
+            <!-- Basic Calculator Tab -->
+            <div class="tab-content active" id="basic-tab">
+                <div class="buttons">
+                    <button class="btn clear" data-action="clear">C</button>
+                    <button class="btn clear" data-action="clear-entry">CE</button>
+                    <button class="btn operator" data-action="backspace">⌫</button>
+                    <button class="btn operator" data-action="divide">÷</button>
+                    
+                    <button class="btn number" data-value="7">7</button>
+                    <button class="btn number" data-value="8">8</button>
+                    <button class="btn number" data-value="9">9</button>
+                    <button class="btn operator" data-action="multiply">×</button>
+                    
+                    <button class="btn number" data-value="4">4</button>
+                    <button class="btn number" data-value="5">5</button>
+                    <button class="btn number" data-value="6">6</button>
+                    <button class="btn operator" data-action="subtract">-</button>
+                    
+                    <button class="btn number" data-value="1">1</button>
+                    <button class="btn number" data-value="2">2</button>
+                    <button class="btn number" data-value="3">3</button>
+                    <button class="btn operator" data-action="add">+</button>
+                    
+                    <button class="btn number zero" data-value="0">0</button>
+                    <button class="btn decimal" data-action="decimal">.</button>
+                    <button class="btn equals" data-action="calculate">=</button>
+                </div>
+                
+                <div class="memory-functions">
+                    <button class="btn memory" data-action="memory-clear">MC</button>
+                    <button class="btn memory" data-action="memory-recall">MR</button>
+                    <button class="btn memory" data-action="memory-add">M+</button>
+                    <button class="btn memory" data-action="memory-subtract">M-</button>
+                </div>
+            </div>
+
+            <!-- Scientific Calculator Tab -->
+            <div class="tab-content" id="scientific-tab">
+                <div class="scientific-grid">
+                    <!-- Scientific Functions Column -->
+                    <div class="scientific-functions">
+                        <div class="scientific-row">
+                            <button class="btn scientific" data-action="sin">sin</button>
+                            <button class="btn scientific" data-action="cos">cos</button>
+                            <button class="btn scientific" data-action="tan">tan</button>
+                        </div>
+                        <div class="scientific-row">
+                            <button class="btn scientific" data-action="sinh">sinh</button>
+                            <button class="btn scientific" data-action="cosh">cosh</button>
+                            <button class="btn scientific" data-action="tanh">tanh</button>
+                        </div>
+                        <div class="scientific-row">
+                            <button class="btn scientific" data-action="log">log</button>
+                            <button class="btn scientific" data-action="ln">ln</button>
+                            <button class="btn scientific" data-action="log10">log₁₀</button>
+                        </div>
+                        <div class="scientific-row">
+                            <button class="btn scientific" data-action="pi">π</button>
+                            <button class="btn scientific" data-action="e">e</button>
+                            <button class="btn scientific" data-action="exp">exp</button>
+                        </div>
+                        <div class="scientific-row">
+                            <button class="btn scientific" data-action="power">x^y</button>
+                            <button class="btn scientific" data-action="sqrt">√</button>
+                            <button class="btn scientific" data-action="factorial">x!</button>
+                        </div>
+                        <div class="scientific-row">
+                            <button class="btn scientific" data-action="abs">|x|</button>
+                            <button class="btn scientific" data-action="floor">floor</button>
+                            <button class="btn scientific" data-action="ceil">ceil</button>
+                        </div>
+                        <div class="scientific-row">
+                            <button class="btn scientific" data-action="round">round</button>
+                            <button class="btn scientific" data-action="rand">rand</button>
+                            <button class="btn scientific" data-action="deg-rad">D/R</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Basic Calculator Column -->
+                    <div class="scientific-basic">
+                        <div class="buttons">
+                            <button class="btn clear" data-action="clear">C</button>
+                            <button class="btn clear" data-action="clear-entry">CE</button>
+                            <button class="btn operator" data-action="backspace">⌫</button>
+                            <button class="btn operator" data-action="divide">÷</button>
+                            
+                            <button class="btn number" data-value="7">7</button>
+                            <button class="btn number" data-value="8">8</button>
+                            <button class="btn number" data-value="9">9</button>
+                            <button class="btn operator" data-action="multiply">×</button>
+                            
+                            <button class="btn number" data-value="4">4</button>
+                            <button class="btn number" data-value="5">5</button>
+                            <button class="btn number" data-value="6">6</button>
+                            <button class="btn operator" data-action="subtract">-</button>
+                            
+                            <button class="btn number" data-value="1">1</button>
+                            <button class="btn number" data-value="2">2</button>
+                            <button class="btn number" data-value="3">3</button>
+                            <button class="btn operator" data-action="add">+</button>
+                            
+                            <button class="btn number zero" data-value="0">0</button>
+                            <button class="btn decimal" data-action="decimal">.</button>
+                            <button class="btn equals" data-action="calculate">=</button>
+                        </div>
+                        
+                        <div class="memory-functions">
+                            <button class="btn memory" data-action="memory-clear">MC</button>
+                            <button class="btn memory" data-action="memory-recall">MR</button>
+                            <button class="btn memory" data-action="memory-add">M+</button>
+                            <button class="btn memory" data-action="memory-subtract">M-</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics Calculator Tab -->
+            <div class="tab-content" id="statistics-tab">
+                <div class="stats-input">
+                    <div class="input-group">
+                        <input type="text" id="data-input" placeholder="Enter numbers separated by commas">
+                        <button class="btn stats" data-action="add-data">Add Data</button>
+                    </div>
+                    <div class="data-set">
+                        <h3>Data Set:</h3>
+                        <div id="data-values" class="data-values">No data entered</div>
+                    </div>
+                </div>
+                <div class="stats-buttons">
+                    <button class="btn stats" data-action="mean">Mean</button>
+                    <button class="btn stats" data-action="median">Median</button>
+                    <button class="btn stats" data-action="mode">Mode</button>
+                    <button class="btn stats" data-action="std-dev">Std Dev</button>
+                    <button class="btn stats" data-action="variance">Variance</button>
+                    <button class="btn stats" data-action="clear-data">Clear Data</button>
+                </div>
+                <div class="stats-results" id="stats-results">
+                    Results will appear here
+                </div>
+            </div>
+
+            <!-- Date Calculator Tab -->
+            <div class="tab-content" id="date-tab">
+                <div class="date-inputs">
+                    <div class="date-group">
+                        <label>Start Date:</label>
+                        <input type="date" id="start-date" class="date-picker">
+                    </div>
+                    <div class="date-group">
+                        <label>End Date:</label>
+                        <input type="date" id="end-date" class="date-picker">
+                    </div>
+                </div>
+                <div class="date-buttons">
+                    <button class="btn date" data-action="days-between">Days Between</button>
+                    <button class="btn date" data-action="add-days">Add Days</button>
+                    <button class="btn date" data-action="subtract-days">Subtract Days</button>
+                    <button class="btn date" data-action="day-of-week">Day of Week</button>
+                    <button class="btn date" data-action="week-number">Week Number</button>
+                </div>
+                <div class="date-results" id="date-results">
+                    Date calculations will appear here
+                </div>
+            </div>
+
+            <div class="calculator-info">
+                <p>Designed by Immanuel. ©Copyright 2025</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
